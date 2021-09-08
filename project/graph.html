@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+  animationEnabled: true,
+  theme: "light2", // "light1", "light2", "dark1", "dark2"
+  title:{
+    text: "Covid19 daily chart"
+  },
+  axisY: {
+    title: "Number of Case"
+  },
+  data: [{        
+    type: "column",  
+    showInLegend: true, 
+    legendMarkerColor: "grey",
+    legendText: "Date ",
+    dataPoints: [      
+      { y: 1000, label: "jan 1" },
+      { y: 20000,  label: "jan 2" },
+      { y: 30000,  label: "jan 3" },
+      { y: 40000,  label: "jan 4" },
+      { y: 50000,  label: "jan 5" },
+      { y: 60000, label: "jan 6" },
+      { y: 70000,  label: "jan 7" },
+      { y: 80000,  label: "jan 8" },
+      { y: 90000,  label: "jan 9" },
+      { y: 100000,  label: "jan 10" },
+      { y: 110000,  label: "jan 11" },
+      { y: 120000,  label: "jan 12" },
+      { y: 130000,  label: "jan 13" },
+      { y: 140000,  label: "jan 14" },
+      { y: 150000,  label: "jan 15" },
+      { y: 160000,  label: "jan 16" },
+      { y: 170000,  label: "jan 17" }
+
+    ]
+  }]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 700px; text-align: center;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
